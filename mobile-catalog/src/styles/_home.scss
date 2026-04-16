@@ -1,0 +1,77 @@
+.home-page {
+  min-height: 100vh;
+}
+
+.home-page__content {
+  padding: 1.5rem 1rem 2rem;
+}
+
+.search-bar {
+  margin-bottom: 1rem;
+}
+
+.search-bar__input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #999;
+  background: transparent;
+  padding: 0 0 0.75rem;
+  font-size: 1.5rem;
+  color: #111;
+  outline: none;
+}
+
+.search-bar__input::placeholder {
+  color: #9a9a9a;
+}
+
+.home-page__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.home-page__results,
+.home-page__filter-button {
+  font-size: 0.875rem;
+  color: #111;
+}
+
+.home-page__filter-button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.home-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.home-page__placeholder-card {
+  min-height: 260px;
+  border: 1px solid #cfcfcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  background-color: #f7f7f7;
+}
+
+@media (min-width: 768px) {
+  .app-header {
+    padding: 1.5rem 2rem 0;
+  }
+
+  .home-page__content {
+    padding: 1.5rem 2rem 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-page__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

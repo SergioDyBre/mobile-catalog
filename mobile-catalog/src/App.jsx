@@ -1,5 +1,15 @@
+import { BrowserRouter } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import AppRouter from './router/AppRouter';
+
 function App() {
-  return <div>Proyecto base listo</div>;
+  return (
+    <CartProvider>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+    </CartProvider>
+  );
 }
 
 export default App;

@@ -44,7 +44,10 @@ function HomePage() {
       <main className="home-page__content">
         <SearchBar value={search} onChange={handleSearchChange} />
 
-        <section className="home-page__toolbar" aria-label="Search results information">
+        <section
+          className="home-page__toolbar"
+          aria-label="Search results information"
+        >
           <p className="home-page__results">{phones.length} RESULTS</p>
           <button type="button" className="home-page__filter-button">
             FILTER
@@ -52,7 +55,9 @@ function HomePage() {
         </section>
 
         {loading && <p className="home-page__status">Loading phones...</p>}
-        {error && <p className="home-page__status home-page__status--error">{error}</p>}
+        {error && (
+          <p className="home-page__status home-page__status--error">{error}</p>
+        )}
 
         {!loading && !error && <PhoneGrid phones={phones} />}
       </main>

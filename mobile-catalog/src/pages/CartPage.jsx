@@ -43,7 +43,11 @@ function CartPage() {
               <div className="cart-page__summary">
                 <p className="cart-page__total-label">TOTAL</p>
                 <p className="cart-page__total-value">{cartTotal} EUR</p>
-                <button type="button" className="cart-page__pay" onClick={handlePay}>
+                <button
+                  type="button"
+                  className="cart-page__pay"
+                  onClick={handlePay}
+                >
                   PAY
                 </button>
               </div>

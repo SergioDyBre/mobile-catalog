@@ -5,10 +5,12 @@ import AppRouter from './router/AppRouter';
 function App() {
   return (
     <CartProvider>
-      <BrowserRouter future={{
-        v7_startTransition: true,
-        v7_relativeSplatPath: true,
-      }}>
+      <BrowserRouter
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <AppRouter />
       </BrowserRouter>
     </CartProvider>

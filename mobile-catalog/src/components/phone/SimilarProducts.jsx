@@ -24,7 +24,9 @@ function SimilarProducts({ products }) {
             <div className="similar-products__meta">
               <p className="similar-products__brand">{product.brand}</p>
               <h3 className="similar-products__name">{product.name}</h3>
-              <p className="similar-products__price">{formatPrice(product.basePrice)}</p>
+              <p className="similar-products__price">
+                {formatPrice(product.basePrice)}
+              </p>
             </div>
           </Link>
         ))}

@@ -1,7 +1,9 @@
 function StorageSelector({ options, selectedStorage, onSelect }) {
   return (
     <fieldset className="detail-selector">
-      <legend className="detail-selector__legend">Storage. How much space do you need?</legend>
+      <legend className="detail-selector__legend">
+        Storage. How much space do you need?
+      </legend>
 
       <div className="detail-selector__options detail-selector__options--storage">
         {options.map((option) => {

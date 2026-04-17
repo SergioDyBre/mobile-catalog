@@ -11,7 +11,11 @@ function Header() {
           <span>MBST</span>
         </Link>
 
-        <Link to="/cart" className="app-header__cart" aria-label="Go to cart page">
+        <Link
+          to="/cart"
+          className="app-header__cart"
+          aria-label="Go to cart page"
+        >
           <span className="app-header__cart-icon">🛍</span>
           <span className="app-header__cart-count">{cartCount}</span>
         </Link>

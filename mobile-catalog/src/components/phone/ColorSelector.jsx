@@ -1,7 +1,9 @@
 function ColorSelector({ options, selectedColor, onSelect }) {
   return (
     <fieldset className="detail-selector">
-      <legend className="detail-selector__legend">Color. Pick your favourite.</legend>
+      <legend className="detail-selector__legend">
+        Color. Pick your favourite.
+      </legend>
 
       <div className="detail-selector__options">
         {options.map((option) => {

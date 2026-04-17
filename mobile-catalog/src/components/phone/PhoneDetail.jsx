@@ -47,7 +47,9 @@ function PhoneDetail({
         <div className="phone-detail__panel">
           <p className="phone-detail__brand">{phone.brand}</p>
           <h1 className="phone-detail__name">{phone.name}</h1>
-          <p className="phone-detail__price">From {formatPrice(currentPrice)}</p>
+          <p className="phone-detail__price">
+            From {formatPrice(currentPrice)}
+          </p>
 
           <StorageSelector
             options={phone.storageOptions}
@@ -75,7 +77,11 @@ function PhoneDetail({
       <section className="specs">
         <h2 className="specs__title">SPECIFICATIONS</h2>
 
-        <div className="specs__table" role="table" aria-label="Phone specifications">
+        <div
+          className="specs__table"
+          role="table"
+          aria-label="Phone specifications"
+        >
           {specRows.map(([label, value]) => (
             <div className="specs__row" role="row" key={label}>
               <div className="specs__label" role="cell">

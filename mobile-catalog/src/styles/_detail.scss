@@ -132,7 +132,9 @@
   border-radius: 0;
   font-size: 0.88rem;
   flex: 0 0 auto;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .detail-selector__chip.is-active {
@@ -151,7 +153,10 @@
   font-size: 0.82rem;
   letter-spacing: 0.04em;
   margin-top: 8px;
-  transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .phone-detail__add:disabled {

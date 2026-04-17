@@ -3,40 +3,40 @@
 }
 
 .home-page__content {
-  padding: 24px;
+  padding: var(--space-6);
 }
 
 .search-bar {
-  margin-bottom: 16px;
+  margin-bottom: var(--space-4);
 }
 
 .search-bar__input {
   width: 100%;
   border: 0;
-  border-bottom: 1px solid #bdbdbd;
+  border-bottom: 1px solid var(--color-border-strong);
   background: transparent;
-  padding: 0 0 12px;
+  padding: 0 0 var(--space-3);
   font-size: 1.75rem;
-  color: #111;
+  color: var(--color-text);
   outline: none;
 }
 
 .search-bar__input::placeholder {
-  color: #9a9a9a;
+  color: var(--color-text-muted);
 }
 
 .home-page__toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: var(--space-6);
 }
 
 .home-page__results,
 .home-page__filter-button {
   font-size: 0.75rem;
   letter-spacing: 0.03em;
-  color: #111;
+  color: var(--color-text);
 }
 
 .home-page__filter-button {
@@ -46,25 +46,25 @@
 }
 
 .home-page__status {
-  margin-bottom: 16px;
+  margin-bottom: var(--space-4);
   font-size: 0.95rem;
 }
 
 .home-page__status--error {
-  color: #b42318;
+  color: var(--color-error);
 }
 
 .phone-grid {
   display: grid;
   grid-template-columns: 1fr;
-  border-top: 1px solid #d9d9d9;
-  border-left: 1px solid #d9d9d9;
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
 }
 
 .phone-card {
-  background: #f3f3f3;
-  border-right: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  background: var(--color-bg);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .phone-card__link {
@@ -78,7 +78,7 @@
   align-items: center;
   justify-content: center;
   min-height: 280px;
-  padding: 32px;
+  padding: var(--space-8);
 }
 
 .phone-card__image {
@@ -88,14 +88,14 @@
 }
 
 .phone-card__info {
-  padding: 16px;
+  padding: var(--space-4);
 }
 
 .phone-card__meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: var(--space-4);
   margin-bottom: 6px;
 }
 
@@ -106,14 +106,14 @@
 }
 
 .phone-card__brand {
-  color: #7b7b7b;
+  color: var(--color-text-muted);
 }
 
 .phone-card__name {
   font-size: 0.95rem;
   font-weight: 400;
   text-transform: uppercase;
-  color: #111;
+  color: var(--color-text);
 }
 
 @media (width >= 834px) {
@@ -122,16 +122,16 @@
   }
 
   .search-bar {
-    margin-bottom: 24px;
+    margin-bottom: var(--space-6);
   }
 
   .search-bar__input {
     font-size: 2rem;
-    padding-bottom: 16px;
+    padding-bottom: var(--space-4);
   }
 
   .home-page__toolbar {
-    margin-bottom: 32px;
+    margin-bottom: var(--space-8);
   }
 
   .phone-grid {
@@ -148,7 +148,7 @@
   }
 
   .phone-card__info {
-    padding: 16px 20px 20px;
+    padding: var(--space-4) var(--space-5) var(--space-5);
   }
 }
 

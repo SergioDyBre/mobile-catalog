@@ -5,17 +5,17 @@
 .detail-page__content {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 24px;
+  padding: var(--space-6);
   overflow-x: hidden;
 }
 
 .detail-page__message {
   font-size: 0.95rem;
-  margin: 24px 0;
+  margin: var(--space-6) 0;
 }
 
 .detail-page__message--error {
-  color: #b42318;
+  color: var(--color-error);
 }
 
 .phone-detail {
@@ -50,7 +50,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 20px;
+  padding-top: var(--space-5);
   max-width: 100%;
   min-width: 0;
 }
@@ -58,7 +58,7 @@
 .phone-detail__brand {
   font-size: 0.75rem;
   text-transform: uppercase;
-  color: #8d8d8d;
+  color: var(--color-text-muted);
   margin-bottom: 10px;
   letter-spacing: 0.04em;
 }
@@ -76,7 +76,7 @@
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 42px;
-  color: #222;
+  color: var(--color-text);
 }
 
 .detail-selector {
@@ -90,21 +90,21 @@
   font-size: 0.78rem;
   font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-3);
   letter-spacing: 0.03em;
-  color: #222;
+  color: var(--color-text);
 }
 
 .detail-selector__options {
   display: flex;
-  gap: 12px;
+  gap: var(--space-3);
   flex-wrap: wrap;
   align-items: center;
   min-width: 0;
 }
 
 .detail-selector__options--storage {
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .detail-selector__swatch {
@@ -112,34 +112,34 @@
   height: 18px;
   min-width: 18px;
   border-radius: 0;
-  border: 1px solid #cfcfcf;
+  border: 1px solid var(--color-border);
   background: var(--swatch-color);
   padding: 0;
   flex: 0 0 auto;
 }
 
 .detail-selector__swatch.is-active {
-  border-color: #111;
-  box-shadow: 0 0 0 1px #111 inset;
+  border-color: var(--color-text);
+  box-shadow: 0 0 0 1px var(--color-text) inset;
 }
 
 .detail-selector__chip {
   min-height: 36px;
-  padding: 0 16px;
-  border: 1px solid #d6d6d6;
-  background: #fff;
-  color: #222;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
   border-radius: 0;
   font-size: 0.88rem;
   flex: 0 0 auto;
   transition:
-    border-color 0.2s ease,
-    color 0.2s ease;
+    border-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .detail-selector__chip.is-active {
-  border-color: #111;
-  color: #111;
+  border-color: var(--color-text);
+  color: var(--color-text);
 }
 
 .phone-detail__add {
@@ -147,16 +147,16 @@
   width: 100%;
   max-width: 100%;
   border: 0;
-  background: #111;
-  color: #fff;
+  background: var(--color-text);
+  color: var(--color-surface);
   text-transform: uppercase;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
-  margin-top: 8px;
+  margin-top: var(--space-2);
   transition:
-    opacity 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease;
+    opacity var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .phone-detail__add:disabled {
@@ -170,7 +170,7 @@
 }
 
 .specs {
-  margin-top: 8px;
+  margin-top: var(--space-2);
   min-width: 0;
 }
 
@@ -178,31 +178,31 @@
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.04em;
-  margin-bottom: 24px;
+  margin-bottom: var(--space-6);
   text-transform: uppercase;
 }
 
 .specs__table {
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid var(--color-border);
 }
 
 .specs__row {
   display: grid;
   grid-template-columns: 160px minmax(0, 1fr);
-  gap: 24px;
+  gap: var(--space-6);
   padding: 14px 0;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .specs__label {
   font-size: 0.74rem;
   text-transform: uppercase;
-  color: #9b9b9b;
+  color: var(--color-text-muted);
 }
 
 .specs__value {
   font-size: 0.9rem;
-  color: #222;
+  color: var(--color-text);
   line-height: 1.5;
   min-width: 0;
 }
@@ -216,7 +216,7 @@
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.04em;
-  margin-bottom: 24px;
+  margin-bottom: var(--space-6);
   text-transform: uppercase;
 }
 
@@ -228,14 +228,14 @@
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: thin;
-  border-left: 1px solid #d9d9d9;
-  border-right: 1px solid #d9d9d9;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
   scroll-snap-type: x proximity;
   min-width: 0;
 }
 
 .similar-products__grid::-webkit-scrollbar {
-  height: 8px;
+  height: var(--space-2);
 }
 
 .similar-products__grid::-webkit-scrollbar-thumb {
@@ -248,10 +248,10 @@
   min-width: 220px;
   text-decoration: none;
   color: inherit;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-  border-left: 1px solid #d9d9d9;
-  background: #fff;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+  background: var(--color-surface);
   scroll-snap-align: start;
 }
 
@@ -260,7 +260,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: var(--space-5);
   overflow: hidden;
 }
 
@@ -276,16 +276,16 @@
   min-height: 86px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 8px 12px;
+  gap: var(--space-2) var(--space-3);
   align-items: end;
-  padding: 12px 12px 14px;
+  padding: var(--space-3) var(--space-3) 14px;
 }
 
 .similar-products__brand {
   grid-column: 1 / -1;
   font-size: 0.65rem;
   text-transform: uppercase;
-  color: #9a9a9a;
+  color: var(--color-text-muted);
 }
 
 .similar-products__name {
@@ -299,7 +299,7 @@
 .similar-products__price {
   font-size: 0.78rem;
   text-transform: uppercase;
-  color: #222;
+  color: var(--color-text);
   justify-self: end;
   white-space: nowrap;
 }
@@ -316,7 +316,7 @@
   }
 
   .phone-detail__panel {
-    padding-top: 24px;
+    padding-top: var(--space-6);
     max-width: 340px;
   }
 

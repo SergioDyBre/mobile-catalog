@@ -1,0 +1,25 @@
+:root {
+  --font-body: Helvetica, Arial, sans-serif;
+
+  --color-bg: #f3f3f3;
+  --color-surface: #ffffff;
+  --color-text: #111111;
+  --color-text-muted: #7b7b7b;
+  --color-border: #d9d9d9;
+  --color-border-strong: #bdbdbd;
+  --color-error: #b42318;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 9999px;
+
+  --transition-fast: 200ms ease;
+}

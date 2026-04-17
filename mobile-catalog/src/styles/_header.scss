@@ -1,5 +1,5 @@
 .app-header {
-  padding: 1.5rem 1rem 0;
+  padding: var(--space-6) var(--space-4) 0;
 }
 
 .app-header__inner {
@@ -10,7 +10,7 @@
 
 .app-header__logo,
 .app-header__cart {
-  color: #111;
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -23,7 +23,7 @@
 .app-header__cart {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: var(--space-1);
   font-size: 1rem;
 }
 

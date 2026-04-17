@@ -16,6 +16,7 @@ function StorageSelector({ options, selectedStorage, onSelect }) {
               className={`detail-selector__chip ${active ? 'is-active' : ''}`}
               onClick={() => onSelect(option)}
               aria-pressed={active}
+              aria-label={`${option.capacity} storage`}
             >
               {option.capacity}
             </button>

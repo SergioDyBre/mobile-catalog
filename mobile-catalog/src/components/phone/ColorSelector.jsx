@@ -15,7 +15,7 @@ function ColorSelector({ options, selectedColor, onSelect }) {
               type="button"
               className={`detail-selector__swatch ${active ? 'is-active' : ''}`}
               onClick={() => onSelect(option)}
-              aria-label={option.name}
+              aria-label={`Color ${option.name}`}
               aria-pressed={active}
               style={{ '--swatch-color': option.hexCode }}
             />

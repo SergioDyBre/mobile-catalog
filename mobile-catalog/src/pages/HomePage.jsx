@@ -48,15 +48,32 @@ function HomePage() {
           className="home-page__toolbar"
           aria-label="Search results information"
         >
-          <p className="home-page__results">{phones.length} RESULTS</p>
-          <button type="button" className="home-page__filter-button">
-            FILTER
-          </button>
+          <p
+            className="home-page__results"
+            role="status"
+            aria-live="polite"
+          >
+            {phones.length} RESULTS
+          </p>
         </section>
 
-        {loading && <p className="home-page__status">Loading phones...</p>}
+        {loading && (
+          <p
+            className="home-page__status"
+            role="status"
+            aria-live="polite"
+          >
+            Loading phones...
+          </p>
+        )}
+
         {error && (
-          <p className="home-page__status home-page__status--error">{error}</p>
+          <p
+            className="home-page__status home-page__status--error"
+            role="alert"
+          >
+            {error}
+          </p>
         )}
 
         {!loading && !error && <PhoneGrid phones={phones} />}

@@ -23,9 +23,11 @@ function CartItem({ item, onRemove }) {
         type="button"
         className="cart-item__remove"
         onClick={() => onRemove(item.lineId)}
+        aria-label={`Eliminar ${item.brand} ${item.name} del carrito`}
       >
         Eliminar
       </button>
+      
     </article>
   );
 }

@@ -77,22 +77,18 @@ function PhoneDetail({
       <section className="specs">
         <h2 className="specs__title">SPECIFICATIONS</h2>
 
-        <div
-          className="specs__table"
-          role="table"
-          aria-label="Phone specifications"
-        >
-          {specRows.map(([label, value]) => (
-            <div className="specs__row" role="row" key={label}>
-              <div className="specs__label" role="cell">
-                {label}
-              </div>
-              <div className="specs__value" role="cell">
-                {value}
-              </div>
-            </div>
-          ))}
-        </div>
+        <table className="specs__table">
+          <tbody>
+            {specRows.map(([label, value]) => (
+              <tr className="specs__row" key={label}>
+                <th scope="row" className="specs__label">
+                  {label}
+                </th>
+                <td className="specs__value">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </section>
 
       <SimilarProducts products={phone.similarProducts || []} />

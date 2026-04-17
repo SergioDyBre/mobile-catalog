@@ -23,7 +23,7 @@ function HomePage() {
 
           const data = await getPhones(search);
           setPhones(search.trim() ? data : data.slice(0, 20));
-        } catch (err) {
+        } catch {
           setError('No se pudieron cargar los teléfonos.');
           setPhones([]);
         } finally {

@@ -3,11 +3,11 @@
 }
 
 .home-page__content {
-  padding: 1.5rem 1rem 2rem;
+  padding: 24px;
 }
 
 .search-bar {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .search-bar__input {
@@ -15,7 +15,7 @@
   border: 0;
   border-bottom: 1px solid #bdbdbd;
   background: transparent;
-  padding: 0 0 0.75rem;
+  padding: 0 0 12px;
   font-size: 1.75rem;
   color: #111;
   outline: none;
@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .home-page__results,
@@ -46,7 +46,7 @@
 }
 
 .home-page__status {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   font-size: 0.95rem;
 }
 
@@ -78,7 +78,7 @@
   align-items: center;
   justify-content: center;
   min-height: 280px;
-  padding: 2rem;
+  padding: 32px;
 }
 
 .phone-card__image {
@@ -88,15 +88,15 @@
 }
 
 .phone-card__info {
-  padding: 1rem;
+  padding: 16px;
 }
 
 .phone-card__meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 0.35rem;
+  gap: 16px;
+  margin-bottom: 6px;
 }
 
 .phone-card__brand,
@@ -116,22 +116,57 @@
   color: #111;
 }
 
-@media (min-width: 768px) {
-  .app-header {
-    padding: 1.5rem 2rem 0;
+@media (width >= 834px) {
+  .home-page__content {
+    padding: 80px 48px 48px;
   }
 
-  .home-page__content {
-    padding: 1.5rem 2rem 3rem;
+  .search-bar {
+    margin-bottom: 24px;
+  }
+
+  .search-bar__input {
+    font-size: 2rem;
+    padding-bottom: 16px;
+  }
+
+  .home-page__toolbar {
+    margin-bottom: 32px;
   }
 
   .phone-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .phone-card__image-wrapper {
+    min-height: 300px;
+    padding: 40px;
+  }
+
+  .phone-card__image {
+    max-height: 240px;
+  }
+
+  .phone-card__info {
+    padding: 16px 20px 20px;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
+  .home-page__content {
+    padding: 80px 48px 48px;
+  }
+
   .phone-grid {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .phone-card__image-wrapper {
+    min-height: 320px;
+    padding: 40px;
+  }
+
+  .phone-card__image {
+    max-height: 260px;
   }
 }

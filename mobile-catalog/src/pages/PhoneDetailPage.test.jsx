@@ -129,8 +129,12 @@ describe('PhoneDetailPage', () => {
 
     await screen.findByText('iPhone 15');
 
-    await userEvent.click(screen.getByRole('button', { name: /change color/i }));
-    await userEvent.click(screen.getByRole('button', { name: /change storage/i }));
+    await userEvent.click(
+      screen.getByRole('button', { name: /change color/i })
+    );
+    await userEvent.click(
+      screen.getByRole('button', { name: /change storage/i })
+    );
 
     expect(screen.getByText('Blue')).toBeInTheDocument();
     expect(screen.getByText('256 GB')).toBeInTheDocument();
@@ -143,8 +147,12 @@ describe('PhoneDetailPage', () => {
 
     await screen.findByText('iPhone 15');
 
-    await userEvent.click(screen.getByRole('button', { name: /change color/i }));
-    await userEvent.click(screen.getByRole('button', { name: /change storage/i }));
+    await userEvent.click(
+      screen.getByRole('button', { name: /change color/i })
+    );
+    await userEvent.click(
+      screen.getByRole('button', { name: /change storage/i })
+    );
     await userEvent.click(screen.getByRole('button', { name: /add to cart/i }));
 
     expect(screen.getByText('Blue')).toBeInTheDocument();

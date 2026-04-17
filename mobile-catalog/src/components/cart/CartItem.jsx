@@ -27,7 +27,6 @@ function CartItem({ item, onRemove }) {
       >
         Eliminar
       </button>
-      
     </article>
   );
 }

@@ -77,17 +77,15 @@ describe('HomePage', () => {
   });
 
   test('searches phones by API when typing in the search box', async () => {
-    phoneApi.getPhones
-      .mockResolvedValueOnce(phonesMock)
-      .mockResolvedValueOnce([
-        {
-          id: 'galaxy-s24',
-          name: 'Galaxy S24',
-          brand: 'Samsung',
-          basePrice: 899,
-          imageUrl: '/galaxy-s24.jpg',
-        },
-      ]);
+    phoneApi.getPhones.mockResolvedValueOnce(phonesMock).mockResolvedValueOnce([
+      {
+        id: 'galaxy-s24',
+        name: 'Galaxy S24',
+        brand: 'Samsung',
+        basePrice: 899,
+        imageUrl: '/galaxy-s24.jpg',
+      },
+    ]);
 
     renderHomePage();
 

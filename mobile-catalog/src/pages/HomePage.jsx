@@ -48,21 +48,13 @@ function HomePage() {
           className="home-page__toolbar"
           aria-label="Search results information"
         >
-          <p
-            className="home-page__results"
-            role="status"
-            aria-live="polite"
-          >
+          <p className="home-page__results" role="status" aria-live="polite">
             {phones.length} RESULTS
           </p>
         </section>
 
         {loading && (
-          <p
-            className="home-page__status"
-            role="status"
-            aria-live="polite"
-          >
+          <p className="home-page__status" role="status" aria-live="polite">
             Loading phones...
           </p>
         )}

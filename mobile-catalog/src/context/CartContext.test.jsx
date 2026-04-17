@@ -3,8 +3,14 @@ import userEvent from '@testing-library/user-event';
 import { CartProvider, useCart } from './CartContext';
 
 function CartConsumerTest() {
-  const { cartItems, cartCount, cartTotal, addToCart, removeFromCart, clearCart } =
-    useCart();
+  const {
+    cartItems,
+    cartCount,
+    cartTotal,
+    addToCart,
+    removeFromCart,
+    clearCart,
+  } = useCart();
 
   const testItem = {
     id: 'SMG-S24U-Titanium-Violet-256GB',

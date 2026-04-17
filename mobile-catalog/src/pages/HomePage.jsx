@@ -15,22 +15,27 @@ function HomePage() {
   };
 
   useEffect(() => {
-    const loadPhones = async () => {
-      try {
-        setLoading(true);
-        setError('');
+    const timeoutId = setTimeout(() => {
+      const loadPhones = async () => {
+        try {
+          setLoading(true);
+          setError('');
 
-        const data = await getPhones();
-        setPhones(data.slice(0, 20));
-      } catch (err) {
-        setError('No se pudieron cargar los teléfonos.');
-      } finally {
-        setLoading(false);
-      }
-    };
+          const data = await getPhones(search);
+          setPhones(search.trim() ? data : data.slice(0, 20));
+        } catch (err) {
+          setError('No se pudieron cargar los teléfonos.');
+          setPhones([]);
+        } finally {
+          setLoading(false);
+        }
+      };
 
-    loadPhones();
-  }, []);
+      loadPhones();
+    }, 300);
+
+    return () => clearTimeout(timeoutId);
+  }, [search]);
 
   return (
     <div className="home-page">

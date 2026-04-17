@@ -54,9 +54,17 @@ function PhoneDetailPage() {
   return (
     <div className="detail-page">
       <Header />
+
       <main className="detail-page__content">
-        {loading && <p className="detail-page__message">Cargando producto...</p>}
-        {error && <p className="detail-page__message detail-page__message--error">{error}</p>}
+        {loading && (
+          <p className="detail-page__message">Cargando producto...</p>
+        )}
+
+        {error && (
+          <p className="detail-page__message detail-page__message--error">
+            {error}
+          </p>
+        )}
 
         {!loading && !error && phone && (
           <PhoneDetail

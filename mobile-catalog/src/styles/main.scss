@@ -1,8 +1,8 @@
-@import './variables';
-@import './header';
-@import './home';
-@import './detail';
-@import './cart';
+@use './variables';
+@use './header';
+@use './home';
+@use './detail';
+@use './cart';
 
 body {
   font-family: Helvetica, Arial, sans-serif;

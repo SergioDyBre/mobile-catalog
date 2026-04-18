@@ -1,11 +1,8 @@
 export function formatPrice(value) {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'EUR',
+  return `${new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-  })
-    .format(value)
-    .replace('€', 'EUR');
+  }).format(value)} EUR`;
 }
 
 export function getSelectedPrice(basePrice, selectedStorage) {

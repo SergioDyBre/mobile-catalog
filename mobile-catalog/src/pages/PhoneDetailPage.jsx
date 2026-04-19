@@ -23,8 +23,8 @@ function PhoneDetailPage() {
 
         const data = await getPhoneById(id);
         setPhone(data);
-        setSelectedColor(data.colorOptions?.[0] || null);
-        setSelectedStorage(data.storageOptions?.[0] || null);
+        setSelectedColor(null);
+        setSelectedStorage(null);
       } catch {
         setError('No se pudo cargar el producto.');
       } finally {
@@ -49,6 +49,9 @@ function PhoneDetailPage() {
       storageLabel: selectedStorage.capacity,
       price: selectedStorage.price,
     });
+
+    setSelectedColor(null);
+    setSelectedStorage(null);
   };
 
   return (

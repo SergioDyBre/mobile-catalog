@@ -12,7 +12,8 @@ function PhoneDetail({
   onSelectStorage,
   onAddToCart,
 }) {
-  const currentImage = selectedColor?.imageUrl || phone.imageUrl;
+  const defaultColor = phone.colorOptions?.[0] || null;
+  const currentImage = selectedColor?.imageUrl || defaultColor?.imageUrl || phone.imageUrl;
   const currentPrice = getSelectedPrice(phone.basePrice, selectedStorage);
   const canAdd = Boolean(selectedColor && selectedStorage);
 
@@ -45,7 +46,6 @@ function PhoneDetail({
         </div>
 
         <div className="phone-detail__panel">
-          <p className="phone-detail__brand">{phone.brand}</p>
           <h1 className="phone-detail__name">{phone.name}</h1>
           <p className="phone-detail__price">
             From {formatPrice(currentPrice)}

@@ -4,9 +4,14 @@
   --color-bg: #f3f3f3;
   --color-surface: #ffffff;
   --color-text: #111111;
+  --color-text-soft: #444444;
   --color-text-muted: #7b7b7b;
+  --color-text-faint: #9a9a9a;
+
   --color-border: #d9d9d9;
   --color-border-strong: #bdbdbd;
+  --color-hairline: rgba(0, 0, 0, 0.45);
+
   --color-error: #b42318;
 
   --space-1: 4px;
@@ -16,10 +21,25 @@
   --space-5: 20px;
   --space-6: 24px;
   --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-25: 100px;
 
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-full: 9999px;
 
   --transition-fast: 200ms ease;
+
+  --header-height: 80px;
+  --layout-page-padding-x: 100px;
+  --layout-search-padding-y: 12px;
+  --layout-content-gap: 48px;
+
+  --card-size: 344px;
+  --card-padding: 16px;
+  --card-gap: 24px;
+  --border-hairline: 0.5px;
 }

@@ -1,11 +1,14 @@
 .app-header {
-  padding: var(--space-6) var(--space-4) 0;
+  height: 80px;
+  padding: 24px 100px;
 }
 
 .app-header__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
+  height: 100%;
 }
 
 .app-header__logo,
@@ -15,18 +18,47 @@
 }
 
 .app-header__logo {
-  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  width: 74px;
+  height: 24px;
+  line-height: 1;
+  font-size: 0;
+}
+
+.app-header__logo span {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
   font-weight: 700;
+  line-height: 24px;
   letter-spacing: -0.04em;
 }
 
 .app-header__cart {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-1);
-  font-size: 1rem;
+  gap: 4px;
+  min-height: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.app-header__cart-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
 }
 
 .app-header__cart-count {
-  font-size: 1rem;
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  padding-top: 1px;
+  text-align: center;
 }

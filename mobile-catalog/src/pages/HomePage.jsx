@@ -42,16 +42,18 @@ function HomePage() {
       <Header />
 
       <main className="home-page__content">
-        <SearchBar value={search} onChange={handleSearchChange} />
+        <div className="home-page__wrapper">
+          <SearchBar value={search} onChange={handleSearchChange} />
 
-        <section
-          className="home-page__toolbar"
-          aria-label="Search results information"
-        >
-          <p className="home-page__results" role="status" aria-live="polite">
-            {phones.length} RESULTS
-          </p>
-        </section>
+          <section
+            className="home-page__toolbar"
+            aria-label="Search results information"
+          >
+            <p className="home-page__results" role="status" aria-live="polite">
+              {phones.length} RESULTS
+            </p>
+          </section>
+        </div>
 
         {loading && (
           <p className="home-page__status" role="status" aria-live="polite">

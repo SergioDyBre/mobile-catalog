@@ -13,7 +13,8 @@ function PhoneDetail({
   onAddToCart,
 }) {
   const defaultColor = phone.colorOptions?.[0] || null;
-  const currentImage = selectedColor?.imageUrl || defaultColor?.imageUrl || phone.imageUrl;
+  const currentImage =
+    selectedColor?.imageUrl || defaultColor?.imageUrl || phone.imageUrl;
   const currentPrice = getSelectedPrice(phone.basePrice, selectedStorage);
   const canAdd = Boolean(selectedColor && selectedStorage);
 

@@ -4,6 +4,7 @@
 
 .home-page__content {
   padding: var(--space-6);
+  background: var(--color-bg);
 }
 
 .home-page__wrapper {
@@ -12,6 +13,16 @@
   z-index: 20;
   background: var(--color-bg);
   padding-bottom: var(--layout-search-padding-y);
+}
+
+.home-page__wrapper::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--layout-search-padding-y) * -1);
+  left: 0;
+  right: 0;
+  height: var(--layout-search-padding-y);
+  background: var(--color-bg);
 }
 
 .search-bar {
@@ -75,7 +86,7 @@
   overflow: hidden;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     background: var(--color-black);

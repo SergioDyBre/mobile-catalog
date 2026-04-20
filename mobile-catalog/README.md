@@ -38,12 +38,14 @@ Antes de arrancar el proyecto, asegúrate de tener instalado:
 ## Instalación
 
 1. Clona el repositorio:
+
    ```bash
    git clone <URL_DEL_REPOSITORIO>
    cd mobile-catalog
    ```
 
 2. Instala dependencias:
+
    ```bash
    npm install
    ```
@@ -166,12 +168,15 @@ Esta organización separa vistas, componentes reutilizables, contexto global, ut
 La aplicación está planteada como una SPA con tres vistas principales:
 
 ### Listado
+
 Muestra los primeros 20 teléfonos, permite búsqueda por marca o nombre y redirige al detalle del producto seleccionado.
 
 ### Detalle
+
 Presenta la información completa del dispositivo, variantes seleccionables y lógica de actualización de precio e imagen según configuración.
 
 ### Carrito
+
 Gestiona productos añadidos, persistencia local, eliminación de líneas y cálculo del total.
 
 ## Gestión de estado
@@ -221,6 +226,7 @@ Se ha buscado cumplir accesibilidad mediante:
 ## Responsive design
 
 La interfaz se adapta a:
+
 - Desktop
 - Tablet
 - Mobile
@@ -247,6 +253,7 @@ npm run lint
 ## Estado del proyecto
 
 Proyecto desarrollado con foco en:
+
 - arquitectura clara
 - componentes reutilizables
 - persistencia del carrito

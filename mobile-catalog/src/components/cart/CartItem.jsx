@@ -10,7 +10,7 @@ function CartItem({ item, onRemove }) {
       </div>
 
       <div className="cart-item__content">
-        <p  className="cart-item__name">{item.name}</p>
+        <p className="cart-item__name">{item.name}</p>
 
         <p className="cart-item__variant">
           {item.storageLabel} | {item.colorName}

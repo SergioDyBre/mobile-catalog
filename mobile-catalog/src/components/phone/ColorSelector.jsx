@@ -33,9 +33,7 @@ function ColorSelector({ options, selectedColor, onSelect }) {
         })}
       </div>
 
-      <p className="detail-selector__color-name">
-        {visibleColorName}
-      </p>
+      <p className="detail-selector__color-name">{visibleColorName}</p>
     </fieldset>
   );
 }

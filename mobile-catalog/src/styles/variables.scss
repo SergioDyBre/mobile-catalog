@@ -1,7 +1,7 @@
 :root {
   /* Tipografía */
   --font-body: Helvetica, Arial, sans-serif;
-  
+
   /* Colores */
   --color-bg: #f3f3f3;
   --color-surface: #ffffff;
@@ -18,7 +18,7 @@
   --color-gray-light: #e8e8e8;
   --color-gray-medium: #c8c8c8;
   --color-gray-dark: #6f6f6f;
-  
+
   /* Espaciado */
   --space-1: 4px;
   --space-2: 8px;
@@ -32,29 +32,29 @@
   --space-16: 64px;
   --space-20: 80px;
   --space-25: 100px;
-  
+
   /* Bordes y radios */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-full: 9999px;
   --border-hairline: 0.5px;
-  
+
   /* Transiciones */
   --transition-fast: 200ms ease;
-  
+
   /* Layout */
-  --header-height: 80px;
+  --header-height: 104px;
   --layout-page-padding-x: 100px;
   --layout-page-padding-y: 72px;
   --layout-content-padding: 24px;
-  --layout-search-padding-y: 12px;
+  --layout-search-padding-y: 25px;
   --layout-content-gap: 48px;
-  
+
   /* Cards */
   --card-size: 344px;
   --card-padding: 16px;
   --card-gap: 24px;
-  
+
   /* Tipografía */
   --font-size-xs: 0.68rem;
   --font-size-sm: 0.75rem;
@@ -63,12 +63,12 @@
   --font-size-lg: 1.25rem;
   --font-size-xl: 2rem;
   --font-size-xxl: 1.75rem;
-  
+
   /* Letter spacing */
   --letter-spacing-tight: -0.03em;
   --letter-spacing-normal: 0.03em;
   --letter-spacing-wide: 0.04em;
-  
+
   /* Phone cards */
   --phone-card-img-height-mobile: 235px;
   --phone-card-img-height-tablet: 260px;

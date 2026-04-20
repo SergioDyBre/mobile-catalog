@@ -8,7 +8,7 @@ El proyecto implementa una aplicación enfocada en la visualización, búsqueda 
 
 ## Funcionalidades
 
-- Listado inicial de los primeros 20 teléfonos obtenidos desde la API
+- Listado inicial de los teléfonos obtenidos desde la API
 - Buscador en tiempo real por nombre o marca usando filtrado por API
 - Indicador del número de resultados encontrados
 - Navegación principal con acceso a inicio y contador de productos en carrito
@@ -41,7 +41,6 @@ Antes de arrancar el proyecto, asegúrate de tener instalado:
 
    ```bash
    git clone <URL_DEL_REPOSITORIO>
-   cd mobile-catalog
    ```
 
 2. Instala dependencias:
@@ -50,27 +49,10 @@ Antes de arrancar el proyecto, asegúrate de tener instalado:
    npm install
    ```
 
-3. Configura las variables necesarias para la API
-
-Si estás usando un archivo `.env`, puedes definir algo parecido a esto:
-
-```env
-VITE_API_URL=<API_URL>
-VITE_API_KEY=87909682e6cd74208f41a6ef39fe4191
-```
-
-Todas las peticiones a la API deben incluir el header `x-api-key`.
-
 ## Ejecución en desarrollo
 
 ```bash
 npm run dev
-```
-
-o, si el proyecto está configurado con Create React App:
-
-```bash
-npm start
 ```
 
 ## Build de producción
@@ -123,10 +105,15 @@ npm run test -- --coverage
 
 ## Lint y formateo
 
-Ejemplos habituales:
+Para lint:
 
 ```bash
 npm run lint
+```
+
+Formateo con prettier:
+
+```bash
 npm run format
 ```
 
@@ -195,16 +182,6 @@ Responsabilidades principales del contexto:
 
 Todas las llamadas a la API REST deben incluir autenticación mediante el header `x-api-key`.
 
-Ejemplo de petición:
-
-```js
-fetch(`${API_URL}/products`, {
-  headers: {
-    'x-api-key': API_KEY,
-  },
-});
-```
-
 ## Decisiones de implementación
 
 - Se usa `PhoneCard` como componente reutilizable para mantener homogéneo el render del catálogo
@@ -230,25 +207,6 @@ La interfaz se adapta a:
 - Desktop
 - Tablet
 - Mobile
-
-## Posibles mejoras
-
-- Skeleton loading en listado y detalle
-- Manejo visual de errores de API
-- Mejoras extra de accesibilidad
-- Deploy online
-- SSR con Next.js
-
-## Scripts habituales
-
-```bash
-npm install
-npm run dev
-npm run build
-npm run preview
-npm run test
-npm run lint
-```
 
 ## Estado del proyecto
 

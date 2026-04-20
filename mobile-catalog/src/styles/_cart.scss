@@ -35,7 +35,7 @@
 .cart-page__items {
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
+  gap: var(--space-8);
 }
 
 .cart-item {
@@ -93,15 +93,15 @@
 }
 
 .cart-item__remove {
+  margin-top: auto;
+  padding: 0;
   background: transparent;
   border: 0;
   color: var(--color-error);
   font-size: var(--font-size-xs);
   font-weight: 300;
   cursor: pointer;
-  padding-top: 18px;
-  grid-column: 2;
-  justify-self: start;
+  align-self: flex-start;
 }
 
 .cart-page__footer {
@@ -157,9 +157,18 @@
     padding: var(--space-6) var(--space-4) var(--space-10);
   }
 
+  .cart-page__title {
+    margin: var(--space-6) 0 var(--space-8);
+  }
+
+  .cart-page__items {
+    gap: var(--space-6);
+  }
+
   .cart-item {
     grid-template-columns: 100px 1fr;
     gap: var(--space-4);
+    max-width: 100%;
   }
 
   .cart-item__media {
@@ -167,22 +176,86 @@
     height: 120px;
   }
 
-  .cart-item__remove {
+  .cart-item__content {
+    height: 120px;
     padding-top: 0;
+  }
+
+  .cart-item__price {
+    margin-top: var(--space-2);
   }
 
   .cart-page__footer {
     flex-direction: column;
     align-items: stretch;
+    gap: var(--space-4);
+    margin-top: var(--space-10);
   }
 
   .cart-page__summary {
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
   }
 
-  .cart-page__pay,
-  .cart-page__continue {
+  .cart-page__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .cart-page__continue,
+  .cart-page__pay {
     width: 100%;
+  }
+
+  .cart-page__pay {
+    margin-left: 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .cart-page__content {
+    padding: 0 var(--space-6) var(--space-10);
+  }
+
+  .cart-page__title {
+    margin: var(--space-10) 0 var(--space-12);
+  }
+
+  .cart-page__items {
+    gap: var(--space-8);
+  }
+
+  .cart-item {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: var(--space-6);
+    max-width: 100%;
+  }
+
+  .cart-item__media {
+    width: 180px;
+    height: 220px;
+  }
+
+  .cart-item__content {
+    height: 220px;
+    padding-top: 0;
+  }
+
+  .cart-page__footer {
+    gap: var(--space-4);
+  }
+
+  .cart-page__pay {
+    margin-left: var(--space-4);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .cart-page__items {
+    gap: var(--space-12);
   }
 }

@@ -35,9 +35,10 @@
   border-bottom: 1px solid var(--color-border-strong);
   background: transparent;
   padding: 0 0 var(--space-3);
-  font-size: var(--font-size-xxl);
+  font-size: 1rem;
   color: var(--color-text);
   outline: none;
+  line-height: 1.1;
 
   &::placeholder {
     color: var(--color-text-muted);
@@ -56,14 +57,15 @@
   color: var(--color-text);
   font-family: var(--font-body);
   font-weight: 300;
-  font-size: var(--font-size-xs);
-  line-height: 100%;
+  font-size: var(--font-size-sm);
+  line-height: 1;
   text-transform: uppercase;
 }
 
 .home-page__status {
   margin-bottom: var(--space-4);
   font-size: var(--font-size-md);
+  line-height: 1.3;
 }
 
 .home-page__status--error {
@@ -144,6 +146,7 @@
   text-transform: uppercase;
   margin: 0 0 var(--space-1) 0;
   color: var(--color-text-muted);
+  line-height: 1.2;
 }
 
 .phone-card__title-row {
@@ -159,6 +162,7 @@
   font-weight: 400;
   text-transform: uppercase;
   margin: 0;
+  line-height: 1.2;
 }
 
 .phone-card__name {
@@ -169,16 +173,16 @@
   white-space: nowrap;
 }
 
-/* Media Queries */
-@media (width >= 834px) {
+/* Tablet */
+@media (width >= 768px) {
   .home-page__content {
-    padding-right: var(--layout-page-padding-x);
-    padding-left: var(--layout-page-padding-x);
+    padding-right: var(--space-6);
+    padding-left: var(--space-6);
   }
 
   .search-bar__input {
     font-size: 1rem;
-    padding-bottom: var(--space-1);
+    padding-bottom: var(--space-2);
   }
 
   .phone-grid {
@@ -190,14 +194,20 @@
   }
 
   .phone-card__info {
-    padding: var(--space-2);
+    padding: var(--space-3);
   }
 }
 
+/* Desktop */
 @media (width >= 1200px) {
   .home-page__content {
     padding-right: var(--layout-page-padding-x);
     padding-left: var(--layout-page-padding-x);
+  }
+
+  .search-bar__input {
+    font-size: 1.5rem;
+    padding-bottom: var(--space-3);
   }
 
   .phone-grid {
@@ -211,5 +221,9 @@
   .phone-card__image {
     max-height: 260px;
     min-width: 167px;
+  }
+
+  .phone-card__info {
+    padding: var(--space-3);
   }
 }

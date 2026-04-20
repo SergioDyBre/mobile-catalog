@@ -232,7 +232,6 @@
   font-size: var(--font-size-xs);
   font-weight: 300;
   text-transform: uppercase;
-  color: var(--color-text-muted);
   letter-spacing: var(--letter-spacing-normal);
   text-align: left;
   justify-self: start;
@@ -354,23 +353,48 @@
   white-space: nowrap;
 }
 
-/* Media Queries */
-@media (min-width: 834px) {
+/* Mobile only: stack */
+@media (max-width: 767px) {
+  .phone-detail {
+    gap: var(--space-12);
+  }
+
+  .phone-detail__hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .phone-detail__panel {
+    padding-top: 0;
+  }
+
+  .phone-detail__media {
+    min-height: 320px;
+  }
+
+  .specs,
+  .similar-products {
+    padding-left: 0;
+  }
+}
+
+/* Tablet and up: keep side by side */
+@media (min-width: 768px) {
   .detail-page__content {
-    padding: var(--layout-page-padding-y) 40px var(--space-12);
+    padding: var(--layout-page-padding-y) var(--space-6) var(--space-12);
   }
 
   .phone-detail {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
-    column-gap: 56px;
-    row-gap: var(--layout-page-padding-y);
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+    column-gap: var(--space-12);
+    row-gap: var(--space-12);
     align-items: start;
   }
 
   .phone-detail__hero {
     grid-column: 1 / -1;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
-    gap: 56px;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+    gap: var(--space-12);
     align-items: start;
   }
 
@@ -380,8 +404,8 @@
 
   .phone-detail__panel {
     grid-column: 2;
-    padding-top: 54px;
-    max-width: 340px;
+    padding-top: 40px;
+    max-width: 380px;
   }
 
   .phone-detail__name {
@@ -397,7 +421,7 @@
   .specs,
   .similar-products {
     grid-column: 1 / -1;
-    padding-left: clamp(100px, 16vw, 220px);
+    padding-left: var(--space-6);
   }
 
   .similar-products__grid {
@@ -418,6 +442,7 @@
   }
 }
 
+/* Desktop */
 @media (min-width: 1200px) {
   .detail-page__content {
     padding: var(--space-20) 40px var(--space-16);

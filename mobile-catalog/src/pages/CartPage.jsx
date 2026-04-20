@@ -36,13 +36,16 @@ function CartPage() {
             </div>
 
             <div className="cart-page__footer">
-              <Link to="/" className="cart-page__continue">
-                CONTINUE SHOPPING
-              </Link>
-
               <div className="cart-page__summary">
                 <p className="cart-page__total-label">TOTAL</p>
                 <p className="cart-page__total-value">{cartTotal} EUR</p>
+              </div>
+
+              <div className="cart-page__actions">
+                <Link to="/" className="cart-page__continue">
+                  CONTINUE SHOPPING
+                </Link>
+
                 <button
                   type="button"
                   className="cart-page__pay"

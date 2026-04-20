@@ -6,6 +6,14 @@
   padding: var(--space-6);
 }
 
+.home-page__wrapper {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 20;
+  background: var(--color-bg);
+  padding-bottom: var(--layout-search-padding-y);
+}
+
 .search-bar {
   margin-bottom: var(--space-3);
 }
@@ -16,13 +24,13 @@
   border-bottom: 1px solid var(--color-border-strong);
   background: transparent;
   padding: 0 0 var(--space-3);
-  font-size: 1.75rem;
+  font-size: var(--font-size-xxl);
   color: var(--color-text);
   outline: none;
-}
 
-.search-bar__input::placeholder {
-  color: var(--color-text-muted);
+  &::placeholder {
+    color: var(--color-text-muted);
+  }
 }
 
 .home-page__toolbar {
@@ -35,24 +43,16 @@
 .home-page__results,
 .home-page__filter-button {
   color: var(--color-text);
-  font-family: Helvetica;
+  font-family: var(--font-body);
   font-weight: 300;
-  font-style: normal;
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   line-height: 100%;
-  letter-spacing: 0%;
   text-transform: uppercase;
-}
-
-.home-page__filter-button {
-  border: 0;
-  background: transparent;
-  cursor: pointer;
 }
 
 .home-page__status {
   margin-bottom: var(--space-4);
-  font-size: 0.95rem;
+  font-size: var(--font-size-md);
 }
 
 .home-page__status--error {
@@ -67,13 +67,38 @@
 }
 
 .phone-card {
+  position: relative;
   background: var(--color-bg);
   border-right: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
   display: flex;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-black);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 0;
+  }
+
+  &:hover::before {
+    transform: scaleY(1);
+  }
+
+  &:hover .phone-card__brand,
+  &:hover .phone-card__name,
+  &:hover .phone-card__price {
+    color: var(--color-white);
+  }
 }
 
 .phone-card__link {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -86,7 +111,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 235px;
+  height: var(--phone-card-img-height-mobile);
   padding: var(--space-8);
 }
 
@@ -103,15 +128,13 @@
   padding: var(--space-4);
 }
 
-/* Marca arriba */
 .phone-card__brand {
-  font-size: 10px;
+  font-size: var(--font-size-xs);
   text-transform: uppercase;
-  margin: 0 0 4px 0;
+  margin: 0 0 var(--space-1) 0;
   color: var(--color-text-muted);
 }
 
-/* Modelo + precio alineados */
 .phone-card__title-row {
   display: flex;
   align-items: baseline;
@@ -119,35 +142,32 @@
   gap: var(--space-2);
 }
 
-.phone-card__name {
-  font-size: 12px;
+.phone-card__name,
+.phone-card__price {
+  font-size: var(--font-size-xs);
   font-weight: 400;
   text-transform: uppercase;
-  color: var(--color-text);
   margin: 0;
+}
+
+.phone-card__name {
+  color: var(--color-text);
 }
 
 .phone-card__price {
-  font-size: 12px;
-  text-transform: uppercase;
   white-space: nowrap;
-  margin: 0;
 }
 
+/* Media Queries */
 @media (width >= 834px) {
   .home-page__content {
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: var(--layout-page-padding-x);
+    padding-left: var(--layout-page-padding-x);
   }
 
   .search-bar__input {
-    font-size: 16px;
-    padding-bottom: 6px;
-  }
-
-  .home-page__toolbar {
-    margin: 0;
-    padding: 0;
+    font-size: 1rem;
+    padding-bottom: var(--space-1);
   }
 
   .phone-grid {
@@ -155,23 +175,18 @@
   }
 
   .phone-card__image-wrapper {
-    height: 260px;
+    height: var(--phone-card-img-height-tablet);
   }
 
   .phone-card__info {
-    padding: 8px;
+    padding: var(--space-2);
   }
 }
 
 @media (width >= 1200px) {
   .home-page__content {
-    padding-right: 100px;
-    padding-left: 100px;
-  }
-
-  .home-page__wrapper {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-right: var(--layout-page-padding-x);
+    padding-left: var(--layout-page-padding-x);
   }
 
   .phone-grid {
@@ -179,7 +194,7 @@
   }
 
   .phone-card__image-wrapper {
-    height: 280px;
+    height: var(--phone-card-img-height-desktop);
   }
 
   .phone-card__image {

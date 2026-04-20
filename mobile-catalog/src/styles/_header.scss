@@ -1,6 +1,28 @@
 .app-header {
   height: 80px;
   padding: 24px 100px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--color-bg);
+}
+
+.home-page__wrapper {
+  position: sticky;
+  top: 80px;
+  z-index: 20;
+  background: var(--color-bg);
+  padding-top: 0;
+  padding-bottom: 12px;
+}
+
+.search-bar {
+  margin-bottom: 12px;
+}
+
+.home-page__toolbar {
+  margin-bottom: 24px;
 }
 
 .app-header__inner {

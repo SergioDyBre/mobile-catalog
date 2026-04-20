@@ -151,7 +151,7 @@
   line-height: 1;
 }
 
-/* Mobile */
+
 @media (max-width: 767px) {
   .cart-page__content {
     padding: var(--space-6) var(--space-4) var(--space-10);
@@ -214,7 +214,6 @@
   }
 }
 
-/* Tablet */
 @media (min-width: 768px) and (max-width: 1199px) {
   .cart-page__content {
     padding: 0 var(--space-6) var(--space-10);
@@ -253,7 +252,6 @@
   }
 }
 
-/* Desktop */
 @media (min-width: 1200px) {
   .cart-page__items {
     gap: var(--space-12);

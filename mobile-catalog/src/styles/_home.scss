@@ -173,7 +173,6 @@
   white-space: nowrap;
 }
 
-/* Tablet */
 @media (width >= 768px) {
   .home-page__content {
     padding-right: var(--space-6);
@@ -198,7 +197,6 @@
   }
 }
 
-/* Desktop */
 @media (width >= 1200px) {
   .home-page__content {
     padding-right: var(--layout-page-padding-x);

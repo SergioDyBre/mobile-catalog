@@ -65,4 +65,14 @@ export default [
       },
     },
   },
+
+  {
+    files: ['__mocks__/**/*.js'],
+    languageOptions: {
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
 ];

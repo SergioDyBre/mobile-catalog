@@ -114,8 +114,8 @@ describe('PhoneDetailPage', () => {
 
     expect(await screen.findByText('iPhone 15')).toBeInTheDocument();
     expect(screen.getByText('Apple')).toBeInTheDocument();
-    expect(screen.getByText('Black')).toBeInTheDocument();
-    expect(screen.getByText('128 GB')).toBeInTheDocument();
+    expect(screen.getByText('No color')).toBeInTheDocument();
+    expect(screen.getByText('No storage')).toBeInTheDocument();
 
     await waitFor(() => {
       expect(getPhoneById).toHaveBeenCalledWith('iphone-15');
@@ -140,7 +140,7 @@ describe('PhoneDetailPage', () => {
     expect(screen.getByText('256 GB')).toBeInTheDocument();
   });
 
-  test('adds the selected phone variant to cart', async () => {
+  test('adds the selected phone variant to cart and resets selections', async () => {
     getPhoneById.mockResolvedValue(phoneMock);
 
     renderPhoneDetailPage();
@@ -153,9 +153,13 @@ describe('PhoneDetailPage', () => {
     await userEvent.click(
       screen.getByRole('button', { name: /change storage/i })
     );
-    await userEvent.click(screen.getByRole('button', { name: /add to cart/i }));
 
     expect(screen.getByText('Blue')).toBeInTheDocument();
     expect(screen.getByText('256 GB')).toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole('button', { name: /add to cart/i }));
+
+    expect(screen.getByText('No color')).toBeInTheDocument();
+    expect(screen.getByText('No storage')).toBeInTheDocument();
   });
 });

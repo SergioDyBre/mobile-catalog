@@ -25,7 +25,7 @@ El proyecto implementa una aplicación enfocada en la visualización, búsqueda 
 - React Context API
 - Sass / CSS modular
 - Jest + Testing Library
-- Node 18
+- Node 20
 
 ## Requisitos previos
 
